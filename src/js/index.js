@@ -20,7 +20,9 @@ $(function () {
   var pathname = window.location.pathname;
   pathname = pathname.substring(1);
   console.log(pathname);
-
+  if (pathname == "") {
+    $('.navbar-nav > li > a[href="index.html"]').parent().addClass("active");
+  }
   var test = $('.navbar-nav > li > a[href="' + pathname + '"]').parent();
 
   console.log(test);
